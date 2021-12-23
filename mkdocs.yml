@@ -41,7 +41,7 @@ theme:
     - search.share
     - search.suggest
   font:
-    text: Roboto
+    text: Montserrat
     #code: Cutive Mono
     code: Fira Code
 
