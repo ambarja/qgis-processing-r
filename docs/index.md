@@ -2,7 +2,6 @@
 hide:
  - toc
  - navigation
-title: Index
 ---
 
 # Processing R Provider
