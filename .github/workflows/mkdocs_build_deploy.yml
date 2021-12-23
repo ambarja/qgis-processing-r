@@ -4,9 +4,9 @@ on:
     branches:
       - main
     paths:
-      - 'qgis-processing-r/website/docs/**'
-      - 'qgis-processing-r/website/overrides/**'
-      - 'qgis-processing-r/website/mkdocs.yml'
+      - 'docs/**'
+      - 'overrides/**'
+      - 'mkdocs.yml'
       - '.github/workflows/mkdocs_build_deploy.yml'
   workflow_dispatch:
 
