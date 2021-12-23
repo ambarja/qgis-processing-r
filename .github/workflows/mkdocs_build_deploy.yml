@@ -4,9 +4,9 @@ on:
     branches:
       - main
     paths:
-      - 'docs/**'
-      - 'overrides/**'
-      - 'mkdocs.yml'
+      - 'website/docs/**'
+      - 'website/overrides/**'
+      - 'website/mkdocs.yml'
       - '.github/workflows/mkdocs_build_deploy.yml'
   workflow_dispatch:
 
