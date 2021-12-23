@@ -1,33 +1,106 @@
 site_name: Processing R Provider
-site_url: https://north-road.github.io/qgis-processing-r/
+site_url:   https://north-road.github.io/qgis-processing-r/
 site_description: Plugin for QGIS for processing using R language
-site_author: Jan Caha
+site_author: Antony Barja
 
+repo_url: https://github.com/ondata/guidaPraticaPubblicazioneCSV
+repo_name: guidaPubblicazioneCSV
+edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; 2019 <a href="https://twitter.com/northroadgeo">North Road</a> and <a href="https://twitter.com/cahik13">Jan Caha</a>.
-
-docs_dir: pages
-site_dir: docs
-
-lang: en
+copyright: Copyright &copy; 2021 <a href="https://twitter.com/northroadgeo">North Road</a> and <a href="https://twitter.com/antony_barja">@antony_barja</a>.
 
 theme:
-    name: bootstrap
+  name: material
+  icon:
+    logo: material/table
+  highlightjs: true
+  custom_dir: overrides
+  favicon: imgs/main_ico.ico
+  palette:
+    - scheme: preference
+      primary: deep purple
+      accent: orange
+#      toggle:
+#        icon: material/weather-night
+#        name: Modalità notte
+#    - scheme: slate
+#      primary: deep purple
+#      accent: orange
+#      toggle:
+#        icon: material/weather-sunny
+#        name: Modalità giorno
+  language: en
+  features:
+    - content.code.annotate
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+  font:
+    text: Roboto
+    #code: Cutive Mono
+    code: Fira Code
 
 nav:
     - Home: index.md
-    - Script syntax: script-syntax.md
-    - Examples:
-        - Example with vector output: ex_vector_output.md
-        - Example with raster output: ex_raster_output.md
-        - Example with table output: ex_table_output.md
-        - Example with file output: ex_file_output.md
-        - Example with number and string outputs: ex_number_string_output.md
-        - Example with tool console log: ex_console_output.md
-        - Example of graphs output: ex_plot.md
-        - Example of using QGIS expressions: ex_expression.md
-    - Changelog: changelog.md
-    - Github: https://github.com/north-road/qgis-processing-r
+
+extra:
+ social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ondatait
+      name: onData su Twitter
+
+# foglio di stile personalizzato
+extra_css:
+  - stylesheets/style.css
 
 plugins:
-    - search
+  - search:
+      lang: it
+  - mkdocstrings
+  - mermaid2
+
+extra_javascript:
+#  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+#  - javascripts/tables.js
+  - javascripts/varie.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+markdown_extensions:
+- admonition
+- md_in_html
+- attr_list
+- footnotes
+- meta
+- mkdocs-click
+- pymdownx.keys
+- pymdownx.betterem:
+      smart_enable: all
+- pymdownx.caret
+- pymdownx.critic:
+      mode: view
+- pymdownx.details
+- pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+- pymdownx.highlight
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+- pymdownx.tabbed
+- pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+- pymdownx.tilde
+- toc:
+      permalink: true
+      toc_depth: 3
+
